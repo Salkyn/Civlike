@@ -17,7 +17,6 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("Activity state", "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -53,13 +52,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("Activity state", "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("Activity state", "onResume");
         long end = System.currentTimeMillis();
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -73,7 +70,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("Activity state", "onPause");
         SharedPreferences.Editor ed = preferences.edit();
         ed.putLong("time", System.currentTimeMillis());
         ed.commit();
@@ -82,19 +78,16 @@ public class MainActivity extends Activity {
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("Activity state", "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("Activity state", "onDestroy");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("Activity state", "onRestart");
     }
 
 }
