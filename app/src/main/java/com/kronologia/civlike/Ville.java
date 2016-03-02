@@ -2,6 +2,8 @@ package com.kronologia.civlike;
 
 import android.content.Context;
 
+import com.kronologia.civlike.ClassPersos.Peon;
+
 import java.util.ArrayList;
 
 /**
@@ -45,7 +47,7 @@ public class Ville {
     }
 
     public void addPeon() {
-        Personnage p = new Personnage();
+        Peon p = new Peon();
         population.add(p);
 
         this.getRessourceByName("Food").upTaux(Constantes.PEON_TX_CONSO_FOOD);
